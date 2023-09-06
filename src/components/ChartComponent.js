@@ -76,6 +76,10 @@ const ChartComponent = () => {
             chartData.labels.push(referral.name);
             chartData.datasets[0].data.push(referral.percentage);
         });
+        if (fetchedData.data.others) {
+            chartData.labels.push('Others');
+            chartData.datasets[0].data.push(fetchedData.data.others);
+        }
     }
 
     return (
