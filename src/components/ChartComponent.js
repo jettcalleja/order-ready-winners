@@ -85,7 +85,7 @@ const ChartComponent = () => {
 
     return (
         <div>
-            <CountdownToMidnight winner={chartData.labels[0]} />
+            Congratulations to {fetchedData && fetchedData.data ? fetchedData.data.topReferrals[0].name : '...'}!!
             {fetchedData ? <Bar data={chartData} options={{ maintainAspectRatio: true }} /> : <p>Loading...</p>}
         </div>
     );
