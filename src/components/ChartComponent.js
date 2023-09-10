@@ -9,6 +9,7 @@ import {
     Legend,
   } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import CountdownToMidnight from './CountdownToMidnight';
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -84,6 +85,7 @@ const ChartComponent = () => {
 
     return (
         <div>
+            <CountdownToMidnight winner={chartData.labels[0]} />
             {fetchedData ? <Bar data={chartData} options={{ maintainAspectRatio: true }} /> : <p>Loading...</p>}
         </div>
     );
